@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ahmad Fathurahman</title>
+    <style>
+        /* CSS untuk membuat menu hamburger */
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 80%;
+            height: 4px;
+            background-color: black;
+            margin-bottom: 4px;
+        }
+
+        .hamburger span:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                display: block;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                width: 80%;
+                background-color: white;
+                z-index: 1;
+            }
+
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .menu li {
+                padding: 10px;
+                border-bottom: 1px solid gray;
+            }
+
+            .menu li a {
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+            }
+
+            .content {
+                margin-top: 50px;
+            }
+
+            /* CSS untuk mengatur tampilan beranda */
+
+/* Variabel warna yang bisa digunakan */
+:root {
+    --warna-utama: #00a0ff; /* Biru */
+    --warna-kedua: #ffffff; /* Putih */
+    --warna-ketiga: #000000; /* Hitam */
+}
+
+/* Mengatur margin dan padding secara umum */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur tampilan nama dan foto Anda */
+.nama-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--warna-utama);
+    height: 300px;
+}
+
+.nama-foto h1 {
+    color: var(--warna-kedua);
+    font-size: 48px;
+    margin-right: 20px;
+}
+
+.nama-foto img {
+    border-radius: 50%;
+}
+
+/* Mengatur tampilan judul atau tagline Anda */
+.judul {
+    text-align: center;
+    background-color: var(--warna-kedua);
+}
+
+.judul h2 {
+    color: var(--warna-utama);
+    font-size: 36px;
+    padding: 20px;
+}
+
+/* Mengatur tampilan kalimat pembuka yang memperkenalkan diri Anda */
+.pembuka {
+    text-align: center;
+    background-color: var(--warna-kedua);
+}
+
+.pembuka p {
+    color: var(--warna-ketiga);
+    font-size: 24px;
+    padding: 20px;
+}
+
+/* Mengatur tampilan contoh karya terbaik Anda */
+.karya {
+    text-align: center;
+    background-color: var(--warna-kedua);
+}
+
+.karya h3 {
+    color: var(--warna-utama);
+    font-size: 30px;
+    padding: 20px;
+}
+
+.karya ul {
+    list-style-type: none;
+}
+
+.karya li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.karya a {
+    text-decoration: none;
+    color: var(--warna-ketiga);
+}
+
+/* Mengatur tampilan tombol atau link untuk menghubungi Anda */
+.kontak {
+    text-align: center;
+}
+
+.kontak a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--warna-kedua);
+    background-color: var(--warna-utama);
+    padding: 10px 20px;
+    border-radius: 10px;
+}}
+/* Reset gaya default untuk footer */
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Ganti dengan warna latar belakang yang Anda inginkan */
+    color: #fff; /* Ganti dengan warna teks yang Anda inginkan */
+  }
+  
+  /* Kontainer footer */
+  .footer-container {
+    max-width: 1200px; /* Atur lebar maksimum sesuai kebutuhan */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Gaya teks nama Anda */
+  .footer-container p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Gaya ikon sosial media */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Jarak antara ikon */
+  }
+  
+  /* Gaya ikon sosial media individual */
+  .social-icons a {
+    text-decoration: none;
+    color: #fff; /* Ganti dengan warna ikon yang sesuai */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a img {
+    width: 30px; /* Atur lebar ikon */
+    height: 30px; /* Atur tinggi ikon */
+  }
+  
+  .social-icons a:hover {
+    color: #007bff; /* Ganti dengan warna yang sesuai saat hover */
+  }
+  
+        
+    </style>
+    <script>
+        // JavaScript untuk menampilkan dan menyembunyikan menu hamburger
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            var hamburger = document.getElementById("hamburger");
+            if (menu.style.display == "block") {
+                menu.style.display = "none";
+                hamburger.classList.remove("active");
+            } else {
+                menu.style.display = "block";
+                hamburger.classList.add("active");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="hamburger" class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- Isi konten sesuai dengan permintaan Anda -->
+            
+           <!-- Bagian beranda -->
+<div id="beranda">
+    <!-- Nama dan foto Anda -->
+    <div class="nama-foto">
+        <h1>Ahmad Fathurahman</h1>
+        <img src="img/fatur1.jpg" alt="Foto profil" width="200" height="200">
+    </div>
+
+    <!-- Judul atau tagline Anda -->
+    <div class="judul">
+        <h2>Programer and Fotografer</h2>
+    </div>
+
+    <!-- Kalimat pembuka yang memperkenalkan diri Anda -->
+    <div class="pembuka">
+        <main>
+            <section id="blog">
+                <article>
+                    <h3>Keseharian Sebagai Seorang Programmer dan Fotografer</h3>
+                    <p>Saya adalah seorang programmer yang mencintai dunia coding dan kreativitas. Setiap hari, saya mengeksplorasi kode-kode yang menghasilkan solusi kreatif bagi masalah kompleks. Namun, saya juga menjalani passion saya sebagai fotografer. Melalui lensa kamera, saya menangkap momen-momen berharga dan mengabadikannya dalam bentuk seni visual.</p>
+                    <p>Kehidupan ganda ini memberikan saya kebahagiaan dan keseimbangan yang luar biasa. Saya percaya bahwa filosofi hidup saya, yakni berusaha semaksimal mungkin dalam setiap proses dan selalu menikmati perjalanan, menjadi pendorong utama kesuksesan dan kepuasan dalam segala hal yang saya lakukan.</p>
+                    <p>Saya selalu berupaya memberikan yang terbaik dalam setiap kode yang saya tulis, setiap gambar yang saya ambil, dan setiap langkah yang saya ambil dalam hidup ini. Dalam setiap tantangan, saya menemukan kesempatan untuk tumbuh dan belajar. Saya memahami bahwa setiap perjalanan memiliki nilai dan hikmahnya sendiri, dan saya dengan penuh semangat menikmati setiap langkah dalam perjalanan ini.</p>
+                </article>
+                <!-- Tambahkan posting-posting lain dengan cara serupa -->
+            </section>
+        </main>
+    </div>
+      <!-- Bagian project -->
+            <div id="project">
+                <h1>Project</h1>
+                 <main>
+                            <article>
+                                <h3>ERP. Enterprise Resource Planning</h3>
+                                <img src="img/Erp.png" alt="Proyek ERP">
+                                <p>Sistem Enterprise Resource Planning (ERP) untuk Manajemen Produksi dan Kolaborasi
+                
+                                    Sistem Enterprise Resource Planning (ERP) yang telah saya kembangkan adalah sebuah solusi canggih yang ditujukan untuk menyempurnakan dan menyempurnakan proses manajemen produksi serta kolaborasi antar tim dalam lingkungan industri. Dengan fokus pada pengelolaan data harian, analisis kinerja, serta komunikasi lintas shift, proyek ini bertujuan untuk meningkatkan efisiensi, ketepatan, dan transparansi operasional.
+                                    
+                                    Fitur Utama:
+                                    
+                                    Inputan Daily Result dan Planning Actual: 
+                                    ERP ini memungkinkan tim produksi dengan mudah memasukkan hasil produksi harian dan perencanaan aktual. Data ini secara otomatis diintegrasikan ke dalam sistem untuk menganalisis dan memantau kinerja produksi secara real-time.
+                                    
+                                    Visualisasi Grafik: 
+                                    Sistem menyediakan fitur visualisasi grafik yang menampilkan perbandingan antara rencana dan hasil aktual. Grafik ini memberikan wawasan cepat tentang seberapa baik kinerja produksi sesuai dengan rencana yang telah ditetapkan.
+                                    
+                                    Memo Antar Shift: 
+                                    ERP memungkinkan pengiriman memo antar shift, memfasilitasi komunikasi penting dan pertukaran informasi yang berlangsung lancar. Tim produksi dapat dengan cepat berbagi pengetahuan tentang perubahan kondisi, tantangan yang dihadapi, dan solusi yang diusulkan.
+                                    
+                                    Manfaat:
+                                    
+                                    Optimisasi Produksi: Dengan data harian yang akurat dan analisis visual, manajemen dapat mengambil keputusan berdasarkan informasi yang relevan, memungkinkan peningkatan efisiensi produksi.
+                                    
+                                    Kolaborasi yang Lebih Baik: Memo antar shift memperkuat kolaborasi antara tim produksi, mengurangi kesalahan komunikasi, dan meningkatkan respons terhadap perubahan yang cepat.
+                                    
+                                    Transparansi Operasional: Informasi terkini tentang produksi dan perencanaan memberikan transparansi yang lebih tinggi kepada seluruh tim produksi dan manajemen.
+                                    
+                                    Sistem ERP ini diharapkan dapat memberikan manfaat signifikan dalam mengelola produksi, meningkatkan kerja sama tim, dan mengoptimalkan efisiensi operasional secara keseluruhan.
+                                    
+                                    </p>
+                                <a href="http://localhost/selection/login.php">Project</a>
+                            </article>
+                
+                            <article>
+                                <h3>Corvics</h3>
+                                <img src="img/corvics.jpg" alt="Proyek Website Brand">
+                                <p>Corvics.ind: Platform Eksklusif untuk Fashion dan Outfit
+                
+                                    Corvics.ind adalah destinasi online yang eksklusif untuk para pecinta fashion yang mencari pilihan outfit berkualitas tinggi dan gaya terbaru. Sebagai platform penyedia barang, Corvics.ind memberikan pengalaman berbelanja yang unik dan memikat, membantu pelanggan menemukan pilihan pakaian dan aksesori yang sesuai dengan gaya mereka.
+                                    
+                                    Fitur Utama:
+                                    
+                                    Koleksi Terseleksi: 
+                                    Corvics.ind menghadirkan koleksi outfit dari merek-merek terkemuka dan desainer berbakat, memastikan pelanggan memiliki akses ke produk berkualitas tinggi dan tren terbaru di dunia fashion.
+                                    
+                                    Penyaringan Personalisasi: 
+                                    Pelanggan dapat menyaring produk berdasarkan preferensi pribadi, seperti gaya, warna, ukuran, dan merek. Ini memudahkan mereka untuk menemukan pilihan yang sesuai dengan selera mereka.
+                                    
+                                    Informasi Produk yang Mendalam: 
+                                    Setiap produk dilengkapi dengan deskripsi rinci, gambar berkualitas tinggi, dan informasi terkait seperti bahan, perawatan, dan ukuran. Ini membantu pelanggan membuat keputusan berbelanja yang lebih cerdas.
+                                    
+                                    Fitur Wishlist dan Favorit: 
+                                    Pelanggan dapat membuat daftar produk favorit mereka dan menyimpannya dalam daftar Wishlist. Ini memungkinkan mereka untuk mengelola dan mempertemukan produk yang menarik minat mereka.
+                                    
+                                    Panduan Gaya dan Tren Terkini: 
+                                    Corvics.ind menyediakan panduan gaya dan tren fashion terkini melalui artikel, tips, dan inspirasi gaya, membantu pelanggan tetap up-to-date dengan dunia fashion.
+                                    
+                                    Manfaat:
+                                    
+                                    Pilihan Eksklusif: Corvics.ind memberikan akses eksklusif ke produk-produk fashion berkualitas tinggi yang mungkin sulit ditemukan di tempat lain.
+                                    
+                                    Kemudahan Berbelanja: Antarmuka yang ramah dan fitur penyaringan personalisasi membantu pelanggan menemukan produk yang sesuai dengan kebutuhan pengguna dan selera mereka.
+                                    
+                                    Informasi Mendalam: Informasi produk yang detail memberikan kepercayaan kepada pelanggan dalam memilih produk yang tepat.
+                                    
+                                    Inspirasi Gaya: Panduan gaya dan tren mode membantu pelanggan menjelajahi gaya baru dan berani.
+                                    
+                                    Corvics.ind menjadi tempat yang sempurna bagi para pecinta mode untuk menjelajahi, berbelanja, dan mengekspresikan diri melalui pilihan pakaian yang unik dan bergaya. Dengan kualitas produk dan pengalaman berbelanja yang istimewa, Corvics.ind menambah semangat eksklusifitas dalam mode modern dunia.</p>
+                                <a href="corvics.html">Project</a>
+                            </article>
+                            <!-- Tambahkan proyek-proyek lain dengan cara serupa -->
+                        </section>
+                    </main>
+
+                    <!-- Tambahkan project sesuai keinginan Anda -->
+                
+                    
+                </div>
+
+                <!-- Bagian fotografer -->
+                <div id="fotografer">
+                    <h2>Fotografer</h2>
+
+                    <!-- Tambahkan foto dan deskripsi sesuai keinginan Anda -->
+                    <p>
+                    <!-- Contoh foto dan deskripsi -->
+                    <img src="img/fatur3.jpg" alt="Foto 1" width="300" height="200">
+                     Ini adalah foto yang saya ambil saat berlibur di Bali. Foto ini menunjukkan keindahan alam dan budaya Bali yang kaya.</p>
+
+                    <img src="img/fatur4.jpg" alt="Foto 2" width="300" height="200">
+                    <p>Ini adalah foto yang saya ambil saat menghadiri acara pernikahan teman saya. Foto ini menunjukkan kebahagiaan dan harapan yang terpancar dari wajah pengantin.</p>
+
+                    <!-- Dan seterusnya -->
+
+                    
+                </div>
+
+                
+            </div>
+
+            <!-- Bagian experience -->
+            <div id="experience">
+                <h1>Experience</h1>
+                <h2>Pengalaman di PT Manufacturing</h2>
+                <p>
+                    Saya memiliki pengalaman yang beragam dalam dunia produksi, dengan berkontribusi sebagai operator produksi di perusahaan-perusahaan ternama seperti PT Samsung Electronics Indonesia, PT Vivo Mobile Indonesia, PT Shidengan Indonesia, dan PT Sumiden Sintered Component Indonesia. Pengalaman ini telah memberikan saya wawasan mendalam tentang proses produksi dan manufaktur yang sangat berharga.
+                </p>
+            
+                <!-- Tambahkan logo perusahaan di samping PT Manufacturing -->
+                <img src="img/294658_samsung_icon.png" alt="Samsung Logo" width="80" height="80">
+                <img src="img/OIP.jpeg" alt="Vivo Logo" width="80" height="80">
+                <img src="img/p_relevant_brand.jpg" alt="Shidengan Logo" width="80" height="80">
+                <img src="img/logo-ssi.png" alt="Sumiden Logo" width="80" height="80">
+            
+                <h2>Pengembangan Diri</h2>
+                <p>
+                    Selain pekerjaan saya di industri manufaktur, saya juga merupakan seorang pembelajar yang tekun. Saya membangun pengetahuan pemrograman secara otodidak dan terus mengembangkannya dengan aktif mengikuti komunitas pemrograman. Kegiatan ini telah memungkinkan saya untuk terus berinovasi dan mengikuti perkembangan teknologi terbaru.
+                </p>
+            
+                <h2>Minat dalam Fotografi</h2>
+                <p>
+                    Saya juga memiliki minat yang mendalam dalam fotografi, yang saya pelajari secara otodidak. Saya mengikuti sebuah komunitas fotografi yang membantu saya mengasah kemampuan saya dalam mengabadikan momen-momen berharga. Kombinasi antara pengalaman di industri dan minat dalam pemrograman serta fotografi memotivasi saya untuk terus belajar dan berkembang dalam bidang yang saya cintai.
+                </p>
+                
+            </div>
+
+            <!-- Bagian about me -->
+            <div id="about">
+                <h1>About me</h1>
+                <p><img src="img/fatur1.jpg" alt="Foto profil" width="200" height="200"></p>
+                <p>"Salam, saya Ahmad Fathurahman, dan saya ingin berbagi sedikit tentang diri saya. Saya adalah seseorang yang penuh antusiasme terhadap dunia teknologi dan seni visual. Sejak kecil, saya telah terpesona oleh potensi yang tak terbatas dari kedua bidang ini.</p>
+                <p>pengalaman saya, membekali saya dengan fondasi yang kuat dalam pemrograman dan komputer. Selama belajar, saya telah terlibat dalam berbagai proyek yang menantang dan memungkinkan saya untuk terus belajar dan berkembang dalam dunia pemrograman.</p>
+                <p>Di sisi lain, fotografi adalah hobi yang saya kembangkan seiring berjalannya waktu. Kamera adalah teman setia saya dalam mengeksplorasi dunia visual. Dalam setiap foto yang saya ambil, saya berusaha menangkap emosi, keindahan, atau cerita yang mungkin terlewatkan oleh mata orang lain.</p>
+                <p>Pada titik ini dalam perjalanan hidup saya, saya telah berhasil menggabungkan dua passion saya. Saya mengambil tantangan untuk menciptakan pengalaman digital yang unik dengan menggunakan keterampilan pemrograman saya, dan kemudian memperkaya kontennya dengan visual yang kuat melalui fotografi.</p>
+                <p>Selain profesionalisme, saya adalah seseorang yang bersemangat untuk terus belajar dan berkolaborasi. Saya percaya bahwa kolaborasi adalah kunci untuk menghasilkan karya-karya yang luar biasa. Jika Anda memiliki ide atau proyek yang ingin Anda diskusikan atau berkolaborasi, jangan ragu untuk menghubungi saya.</p>
+                <p>Terima kasih telah mengunjungi halaman "About Me" saya. Saya berharap melalui website ini, Anda dapat mengenal saya lebih baik dan menikmati eksplorasi melalui karya-karya saya. Saya selalu terbuka untuk berbicara dan berbagi ide dengan orang-orang yang memiliki minat dan visi yang sama. Mari berkolaborasi dan menjalani perjalanan kreatif bersama!"</p>
+
+                
+            </div>
+
+            <!-- Bagian contact -->
+            <div id="contact">
+                <h1>Contact</h1>
+                <p>Jika Anda ingin menghubungi saya atau berbicara tentang proyek, prestasi, atau pertanyaan lainnya, saya tersedia melalui berbagai saluran komunikasi. Silakan pilih yang paling nyaman untuk Anda:</p>
+                
+                <ul>
+                    <li>WhatsApp: 081567802686</li>
+                    <li>Gmail: ahmadfathurahman2208@gmail.com</li>
+                    <li>Instagram: @Fattur_27</li>
+                </ul>
+                
+            </div> 
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+          <div class="social-icons">
+            <a href="https://www.instagram.com/Fattur_27" target="_blank">
+              <img src="img/6929237_instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/Listiaproject" target="_blank">
+              <img src="img/8546919_github_square_icon.png" alt="GitHub">
+            </a>
+            <a href="https://web.whatsapp.com/send?phone=081567802686" target="_blank">
+              <img src="img/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png" alt="WhatsApp">
+            </a>
+            <a href="https://t.me/081567802686" target="_blank">
+              <img src="img/4102591_applications_media_social_telegram_icon.png" alt="Telegram">
+            </a>
+            <a class="gmail" href="mailto:ahmadfathurahman2208@gmail.com">
+                <img src="img/7115264_new_logo_gmail_icon.png" alt="Gmail">
+              </a>
+              <a href="https://t.me/081567802686" target="_blank">
+                <img src="img/Logo L.png" alt="Telegram">
+              </a>
+              
+          </div>
+          <p>Ahmad Fathurahman</p>
+        </div>
+      </footer>
+      
+  
+
+</body>
+</html>

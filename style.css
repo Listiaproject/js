@@ -1,0 +1,167 @@
+<style>
+        /* CSS untuk membuat menu hamburger */
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            margin-bottom: 4px;
+        }
+
+        .hamburger span:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                display: block;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                z-index: 1;
+            }
+
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .menu li {
+                padding: 10px;
+                border-bottom: 1px solid gray;
+            }
+
+            .menu li a {
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+            }
+
+            .content {
+                margin-top: 50px;
+            }
+
+            /* CSS untuk mengatur tampilan beranda */
+
+/* Variabel warna yang bisa digunakan */
+:root {
+    --warna-utama: #00a0ff; /* Biru */
+    --warna-kedua: #ffffff; /* Putih */
+    --warna-ketiga: #000000; /* Hitam */
+}
+
+/* Mengatur margin dan padding secara umum */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur tampilan nama dan foto Anda */
+.nama-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--warna-utama);
+    height: 300px;
+}
+
+.nama-foto h1 {
+    color: var(--warna-kedua);
+    font-size: 48px;
+    margin-right: 20px;
+}
+
+.nama-foto img {
+    border-radius: 50%;
+}
+
+/* Mengatur tampilan judul atau tagline Anda */
+.judul {
+    text-align: center;
+    background-color: var(--warna-kedua);
+}
+
+.judul h2 {
+    color: var(--warna-utama);
+    font-size: 36px;
+    padding: 20px;
+}
+
+/* Mengatur tampilan kalimat pembuka yang memperkenalkan diri Anda */
+.pembuka {
+    text-align: center;
+    background-color: var(--warna-kedua);
+}
+
+.pembuka p {
+    color: var(--warna-ketiga);
+    font-size: 24px;
+    padding: 20px;
+}
+
+/* Mengatur tampilan contoh karya terbaik Anda */
+.karya {
+    text-align: center;
+    background-color: var(--warna-kedua);
+}
+
+.karya h3 {
+    color: var(--warna-utama);
+    font-size: 30px;
+    padding: 20px;
+}
+
+.karya ul {
+    list-style-type: none;
+}
+
+.karya li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.karya a {
+    text-decoration: none;
+    color: var(--warna-ketiga);
+}
+
+/* Mengatur tampilan tombol atau link untuk menghubungi Anda */
+.kontak {
+    text-align: center;
+}
+
+.kontak a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--warna-kedua);
+    background-color: var(--warna-utama);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+        }
+
+        .footer {
+            text-align: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+        
+    </style>
